@@ -50,18 +50,27 @@ var findDigitZero = function(number){
     return findZero;
   }
 
+  var reverseOrder = function(number){
+    var reverseStr;
+    reverseStr = findDigitZero(number);
+    reverseStr.reverse();
+
+    return reverseStr;
+  }
+
+
 
 $(document).ready(function(){
   $("#input").submit(function(event){
     event.preventDefault();
 
     var number = $("#number").val();
-    if (!number.match(/^[0-9]$/)){
+    if (!number.match(/^[0-9]+$/)){
       alert("please enter a valid number");
     }
     else {
       $("#result").empty();
-      $("#result").append(" " + findDigitZero(number));
+      $("#result").append(" " + reverseOrder(number));
     }
 
   });
