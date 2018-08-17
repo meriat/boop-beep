@@ -24,12 +24,13 @@ var findDigitOne = function(number){
   var findOne = [];
   findOne = replaceNumber(number);
 
-  // for(j=0;j<findOne.length;j++){
-  //   if(findOne[j].match(/^[1]+$/)){
-  //     findOne.splice(j,1, "Boop");
-  //   }
-  //
-  // }
+  for(j=0;j<findOne.length;j++){
+
+    while(findOne[j].match(/^[1]+$/)) {
+      findOne.splice(j,1, "Boop");
+    }
+
+  }
   return findOne;
 }
 
