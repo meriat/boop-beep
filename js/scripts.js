@@ -6,6 +6,7 @@ var toArray = function(number){
   return array;
 };
 
+// checking numbers divisible by 3
 var replaceNumber = function(number){
   var arrayOne = [];
   var divisibleByArray = [];
@@ -20,13 +21,14 @@ var replaceNumber = function(number){
   return arrayOne;
 }
 
+// checking for numbers with digit 1
 var findDigitOne = function(number){
   var findOne = [];
   findOne = replaceNumber(number);
 
   for(j=0;j<findOne.length;j++){
-
-    while(findOne[j].match(/^[1]+$/)) {
+    var stringOne = findOne[j].toString();
+    if(stringOne.match([1])) {
       findOne.splice(j,1, "Boop");
     }
 
@@ -34,13 +36,30 @@ var findDigitOne = function(number){
   return findOne;
 }
 
+// checking for numbers with digit 0
+// var findDigitZero = function(number){
+//   var findZero = [];
+//   findZero = findDigitOne(number);
+//
+//   for(j=0;j<findZero.length;j++){
+//     var stringZero = findOne[j].toString();
+//     if(stringZero.match([0])) {
+//       findOne.splice(j,1, "Beep");
+//     }
+//
+//   }
+//   return findOne;
+//
+//
+// }
+
 $(document).ready(function(){
   $("#input").submit(function(event){
     event.preventDefault();
 
     var number = $("#number").val();
     // alert(replaceNumber(number));
-    $("#result").append(" " + findDigitOne(number));
+    $("#result").append(" " + findDigitZero(number));
   });
 
 });
