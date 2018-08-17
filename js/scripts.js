@@ -70,16 +70,14 @@ $(document).ready(function(){
     }
     else {
       $("#output").empty();
+      $("#reverseOutput").empty();
       $("#output").append(" " + findDigitZero(number));
+      $("#reverseOutput").append(" " + reverseOrder(number));
       $("#result").slideDown();
+
       }
-});
-      $("#result#btnReverse").submit(function(event){
-        event.preventDefault();
-        // $("#reverseOutput").empty();
-        // $("#reverseOutput").append(" " + reverseOrder(number));
-        $("#reverse").slideDown();
-      });
+    });
+
 
 
 
