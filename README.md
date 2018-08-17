@@ -33,6 +33,6 @@ _A web application that takes a number from a user and returns a range of number
 * _jQuery_
 
 ## Link to GitHub Pages
-* 
+* https://meriat.github.io/boop-beep
 
 Copyright (c) 2016 **_Meria J Thomas_**
