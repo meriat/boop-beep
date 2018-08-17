@@ -1,3 +1,12 @@
 #result{
   margin: 30px;
+  display: none;
+}
+
+#reverse{
+  display: none;
+}
+
+#btnReverse{
+  color: green;
 }

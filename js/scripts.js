@@ -69,10 +69,18 @@ $(document).ready(function(){
       alert("please enter a valid number");
     }
     else {
-      $("#result").empty();
-      $("#result").append(" " + reverseOrder(number));
-    }
+      $("#output").empty();
+      $("#output").append(" " + findDigitZero(number));
+      $("#result").slideDown();
+      }
+});
+      $("#result#btnReverse").submit(function(event){
+        event.preventDefault();
+        // $("#reverseOutput").empty();
+        // $("#reverseOutput").append(" " + reverseOrder(number));
+        $("#reverse").slideDown();
+      });
 
-  });
+
 
 });
