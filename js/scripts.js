@@ -26,7 +26,7 @@ var findDigitOne = function(number){
   var findOne = [];
   findOne = replaceNumber(number);
 
-  for(j=0;j<findOne.length;j++){
+  for(j=0; j<findOne.length; j++){
     var stringOne = findOne[j].toString();
     if(stringOne.match([1])) {
       findOne.splice(j,1, "Boop");
@@ -37,30 +37,27 @@ var findDigitOne = function(number){
 }
 
 // checking for numbers with digit 0
-// var findDigitZero = function(number){
-//   var findZero = [];
-//   findZero = findDigitOne(number);
-//
-//   for(j=0;j<findZero.length;j++){
-//     var stringZero = findOne[j].toString();
-//     if(stringZero.match([0])) {
-//       findOne.splice(j,1, "Beep");
-//     }
-//
-//   }
-//   return findOne;
-//
-//
-// }
+var findDigitZero = function(number){
+  var findZero = [];
+  findZero = findDigitOne(number)
+
+    for(k=0; k<findZero.length; k++){
+      var stringZero = findZero[k].toString();
+      if(stringZero.match([0])){
+        findZero.splice(k,1,"Beep");
+      }
+    }
+    return findZero;
+  }
+
 
 $(document).ready(function(){
   $("#input").submit(function(event){
     event.preventDefault();
 
-
     var number = $("#number").val();
     $("#result").empty();
-    $("#result").append(" " + findDigitOne(number));
+    $("#result").append(" " + findDigitZero(number));
   });
 
 });
