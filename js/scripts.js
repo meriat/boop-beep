@@ -56,8 +56,14 @@ $(document).ready(function(){
     event.preventDefault();
 
     var number = $("#number").val();
-    $("#result").empty();
-    $("#result").append(" " + findDigitZero(number));
+    if (!number.match(/^[0-9]$/)){
+      alert("please enter a valid number");
+    }
+    else {
+      $("#result").empty();
+      $("#result").append(" " + findDigitZero(number));
+    }
+
   });
 
 });
