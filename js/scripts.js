@@ -57,9 +57,10 @@ $(document).ready(function(){
   $("#input").submit(function(event){
     event.preventDefault();
 
+
     var number = $("#number").val();
-    // alert(replaceNumber(number));
-    $("#result").append(" " + findDigitZero(number));
+    $("#result").empty();
+    $("#result").append(" " + findDigitOne(number));
   });
 
 });
